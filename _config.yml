@@ -1,0 +1,39 @@
+# Site settings
+title: __namc #website title
+description: > # this means to ignore newlines until "baseurl:"
+  All things programming
+author:
+    name: "Namc"
+
+url:  # the base hostname & protocol for your site
+baseurl: # the sub-path of your site, e.g. /blog/
+permalink: :name
+
+disqus_shortname: namc-in # leave empty if you don't want comments
+google_analytics: true #if set to "true" modify the google_analytycs.html, set to false otherwise
+
+# Links settings
+links:
+  - name:         Home
+    url:          /
+
+# Build settings
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+
+exclude: [LICENSE, bower.json]
